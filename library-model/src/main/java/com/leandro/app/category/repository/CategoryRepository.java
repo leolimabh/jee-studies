@@ -28,7 +28,7 @@ public class CategoryRepository {
 
 	@SuppressWarnings("unchecked")
 	public List<Category> findAll(final String orderField) {
-		return em.createQuery("From Category Order by :orderFiedl").setParameter("orderField", orderField)
+		return em.createQuery("From Category Order by " + orderField)
 				.getResultList();
 	}
 
